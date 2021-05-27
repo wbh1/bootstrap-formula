@@ -1,0 +1,3 @@
+---
+salt_master_ip: 127.0.0.1
+password_hash: $5$F225ZJekR1jlOZRR$lRrwDcdkluNoT4lj9mAgnz7BHIUlgGbtQMxIMOrkVL2

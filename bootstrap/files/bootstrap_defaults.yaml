@@ -1,0 +1,13 @@
+salt_minion_version: 3003+ds-1
+salt_master_ip: {{ pillar['salt_master_ip'] }}
+username: wbhegedus
+password_hash: {{ pillar['password_hash'] }}
+domain: hegedus.wtf
+
+firewall_rules:
+  - ufw default allow outgoing
+  - ufw default deny incoming
+  - ufw limit ssh
+  - ufw allow 9100/tcp
+  - ufw allow from {{ pillar['salt_master_ip'] }}
+  - ufw enable
