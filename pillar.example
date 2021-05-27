@@ -1,3 +1,9 @@
 ---
 salt_master_ip: 127.0.0.1
 password_hash: $5$F225ZJekR1jlOZRR$lRrwDcdkluNoT4lj9mAgnz7BHIUlgGbtQMxIMOrkVL2
+
+# https://github.com/saltstack-formulas/openssh-formula/blob/master/pillar.example
+sshd_config:
+  Port: 22
+  PermitRootLogin: 'no'
+  PasswordAuthentication: 'no'
