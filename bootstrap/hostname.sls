@@ -1,3 +1,5 @@
+{% import_yaml slspath + '/files/bootstrap_defaults.yaml' as bootstrap_defaults %}
+
 set hostname:
   network.system:
     - hostname: {{ grains['id'] }}.{{ bootstrap_defaults['domain'] }}
