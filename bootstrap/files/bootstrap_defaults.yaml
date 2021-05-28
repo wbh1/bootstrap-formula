@@ -7,7 +7,7 @@ domain: hegedus.wtf
 firewall_rules:
   - ufw default allow outgoing
   - ufw default deny incoming
-  - ufw limit ssh
+  - ufw limit 2222/tcp
   - ufw allow 9100/tcp
   - ufw allow from {{ pillar['salt_master_ip'] }}
   - ufw enable
